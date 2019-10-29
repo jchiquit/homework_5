@@ -117,12 +117,15 @@
 
 
 	function gray() {
+		// video.classList.add('grayscale')
+		video.classList.add('grayscale')
 		console.log("In grayscale")
 		// Utilize the existing grayscale class.
 
 	}
 
 	function color() {
+		video.classList.remove('grayscale')
 		console.log("In color")
 		// Remove the existing grayscale class.
 
@@ -130,8 +133,13 @@
 
 	// Not sure if we can test for this???
 	function random(){
+		var random = Math.random()*100;
+		video.style.setProperty('filter','grayscale'+'('+random+'%)');
+		video.style.setProperty('transform','skewX'+'('+random+'deg)');
+		console.log("Grayscale and skewX set to " + random);
 		// Use setProperty to change the grayscale filder and transform properties of the video.
 		// Log what the new values are to the console.
+
 	}
 
 	</script>
